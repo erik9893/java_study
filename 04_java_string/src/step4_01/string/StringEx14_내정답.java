@@ -3,7 +3,7 @@ package step4_01.string;
 import java.util.Scanner;
 
 /*
- * # 문자열 비교 
+ * # 문자열 비교
  * . equals() 메서드 사용없이 문자의 일치여부 비교
  * 예)
  * 코끼리
