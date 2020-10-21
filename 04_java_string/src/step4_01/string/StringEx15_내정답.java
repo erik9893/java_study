@@ -12,9 +12,9 @@ import java.util.Scanner;
  *    문자와 숫자가 섞여있다.
  */
 
-//15 : 18 시작
-//
-public class StringEx15_내문제 {
+//15 : 38 시작
+//15 : 43 종료
+public class StringEx15_내정답 {
 
 	public static void main(String[] args) {
 		
@@ -24,9 +24,22 @@ public class StringEx15_내문제 {
 		
 		System.out.print("입력 : ");
 		String text = scan.next();
-
+		
+		int cnt = 0;
 		for (int i = 0; i < num.length; i++) {
-			
+			for (int j = 0; j < text.length(); j++) {
+				if(num[i] == text.charAt(j)) {
+					cnt ++;
+				}
+			}
+		}
+		
+		if(cnt == text.length()) {
+			System.out.println("숫자만 있다.");
+		}else if(cnt == 0) {
+			System.out.println("문자만 있다.");
+		}else {
+			System.out.println("문자와 숫자가 섞여 있다.");
 		}
 	}
 

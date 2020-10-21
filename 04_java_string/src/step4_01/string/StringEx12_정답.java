@@ -87,7 +87,7 @@ public class StringEx12_정답 {
 				int berry = 0;
 				
 				for (int i=0; i<count; i++) {
-					if		(jang[i][0] == 1) apple++;
+					if		(jang[i][1] == 1) apple++;
 					else if (jang[i][1] == 2) banana++;
 					else if (jang[i][1] == 3) berry++;
 					
