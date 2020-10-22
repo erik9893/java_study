@@ -56,6 +56,7 @@ public class StringEx18_정답 {
 			
 			if (!me.equals(word)) {
 				while (true) {
+					score -= 5;
 					int r = ran.nextInt(size);
 					if (check[r] == 0) { // 랜덤으로 뽑은 글자가 0 이면 1로 변경
 						check[r] = 1;
@@ -66,9 +67,12 @@ public class StringEx18_정답 {
 						}
 						break;
 					}
-				
 				}
-				
+			}
+			else {
+				System.out.println("정답 : " + word);
+				System.out.println("점수 : " + score);
+				break;
 			}
 			
 			

@@ -28,6 +28,18 @@ public class StringEx18_내정답 {
 		// 1이면 같은 철자 확인 0이면 *표시
 		while (true) {
 			
+			int cnt = 0;
+			for (int i = 0; i < check.length; i++) {
+				if(check[i] == 0) {
+					cnt += 1;
+					break;
+				}
+			}
+			
+			if(cnt == 0) {
+				break;
+			}
+			
 			System.out.println("뜻 : " + meaning);
 			System.out.print("문제 : ");
 			for (int i =0; i< size; i++) {
@@ -44,26 +56,29 @@ public class StringEx18_내정답 {
 			
 			
 			if(!me.equals(word)) {
-				int r = ran.nextInt(size);
-				if(check[r] == 0) {
-					check[r] = 1;
+				while(true) {
+					score -= 5;		
+					int r = ran.nextInt(size);
+					if(check[r] == 0) {
+						check[r] = 1;
+						for (int i = 0; i < size; i++) {
+							if(word.charAt(i) == word.charAt(r)) {
+								check[i] = 1;
+							}
+						}
+						break;
+					}
 					
 				}
-				for (int i = 0; i < size; i++) {
-					if(word.charAt(i) == me.charAt(i)) {
-						check[i] = 1;
-					}
-				}
-				score -= 5;		
-				
-			}else if(me.equals(word)) {
-				System.out.println("정답!");
+			}
+			else if(me.equals(word)) {
+				System.out.println("정답 : " + word);
 				System.out.println("점수 : " + score + "점");
 				break;
 			}
 			
 		}
-
+		scan.close();
 	}
 
 }
