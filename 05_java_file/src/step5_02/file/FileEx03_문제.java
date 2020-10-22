@@ -1,5 +1,7 @@
 package step5_02.file;
 
+import java.io.FileWriter;
+
 //# 파일 저장하기 : 연습문제1
 
 
@@ -18,12 +20,23 @@ public class FileEx03_문제 {
 
 		for (int i = 0; i < names.length; i++) {
 			data += names[i];
+			data += "/";
 			data += ages[i];
 			if(i != names.length-1) {
 				data += ",";
 			}
 		}
+		System.out.println(data);
 		
+		FileWriter fw = null;
+		try {
+			fw = new FileWriter(fileName);
+			fw.write(data);
+			
+			fw.close();
+		} catch (Exception e) {
+			
+		}
 	}
 
 }
