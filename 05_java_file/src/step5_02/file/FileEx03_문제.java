@@ -32,7 +32,6 @@ public class FileEx03_문제 {
 		try {
 			fw = new FileWriter(fileName);
 			fw.write(data);
-			
 			fw.close();
 		} catch (Exception e) {
 			

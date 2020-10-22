@@ -1,5 +1,7 @@
 package step5_02.file;
 
+import java.io.FileWriter;
+
 //# 파일 저장하기 : 연습문제2
 
 public class FileEx04_문제 {
@@ -18,7 +20,26 @@ public class FileEx04_문제 {
 		
 		String data = "";
 
-
+		int size = names.length;
+		for (int i = 0; i < size; i++) {
+			data += names[i];
+			data += "/";
+			data += pws[i];
+			data += "/";
+			data += moneys[i];
+			data += "\n";
+		}
+		
+		FileWriter fw = null;
+		
+		try {
+			fw = new FileWriter(fileName);
+			fw.write(data);
+			fw.close();
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 	}
 
 }
