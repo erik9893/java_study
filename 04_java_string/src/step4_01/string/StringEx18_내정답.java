@@ -10,6 +10,8 @@ import java.util.Scanner;
 	전부 벗겨지거나 맞추면 종료 
 */
 
+// 15: 26 시작
+//
 public class StringEx18_내정답 {
 
 	public static void main(String[] args) {
@@ -32,6 +34,7 @@ public class StringEx18_내정답 {
 			System.out.println();
 			System.out.println("영어단어를 입력하세요 >>> ");
 			String me = scan.next();
+			
 			
 		}
 
