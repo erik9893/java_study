@@ -28,14 +28,52 @@ public class ClassEx09_내정답 {
 		Random ran = new Random();
 		Ex09 e = new Ex09();
 		
-		for (int i = 0; i < e.front.length; i++) {
-			if(e.front[i] == 1) {System.out.print("☆ ");}
-			else if(e.front[i] == 2) {System.out.print("★ ");}
-			else if(e.front[i] == 3) {System.out.print("＃ ");}
-			else if(e.front[i] == 4) {System.out.print("＆ ");}
-			else if(e.front[i] == 5) {System.out.print("§ ");}
+		int size = e.front.length;
+		
+		for (int i = 0; i < 1000; i++) {
+			int r = ran.nextInt(size);
+			int temp = e.front[0];
+			e.front[0] = e.front[r];
+			e.front[r] = temp;
 		}
-
+		
+		while(true) {
+			for (int i = 0; i < size; i++) {
+				if(e.front[i] == 1) {System.out.print("☆\t");}
+				else if(e.front[i] == 2) {System.out.print("★\t");}
+				else if(e.front[i] == 3) {System.out.print("＃\t");}
+				else if(e.front[i] == 4) {System.out.print("＆\t");}
+				else if(e.front[i] == 5) {System.out.print("§\t");}
+			}
+			System.out.println();
+			
+			for (int i = 0; i < size; i++) {
+				if(e.back[i] == 1) {System.out.print("☆\t");}
+				else if(e.back[i] == 2) {System.out.print("★\t");}
+				else if(e.back[i] == 3) {System.out.print("＃\t");}
+				else if(e.back[i] == 4) {System.out.print("＆\t");}
+				else if(e.back[i] == 5) {System.out.print("§\t");}
+				else {
+					System.out.print("●\t");
+				}
+			}
+			System.out.println();
+			
+			if(e.answerCnt == 5) {break;}
+			
+			System.out.print("인덱스1 입력 : ");
+			int idx1 = scan.nextInt();
+			
+			System.out.print("인덱스2 입력 : ");
+			int idx2 = scan.nextInt();
+			
+			if(e.front[idx1] == e.front[idx2]) {
+				e.back[idx1] = e.front[idx1];
+				e.back[idx2] = e.front[idx2];
+				e.answerCnt ++;
+			}
+		}
+		scan.close();
 	}
 
 }
