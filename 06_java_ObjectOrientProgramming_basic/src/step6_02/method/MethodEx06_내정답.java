@@ -1,6 +1,5 @@
 package step6_02.method;
 
-import java.util.Scanner;
 
 class Ex06{
 	
