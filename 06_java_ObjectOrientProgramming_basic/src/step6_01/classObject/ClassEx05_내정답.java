@@ -27,8 +27,8 @@ public class ClassEx05_내정답 {
 		
 		Scanner scan = new Scanner(System.in);
 
-		 //Ex05 mega = new Ex05();
-		 //mega.name = "메가IT 고등학교";
+		 Ex05 mega = new Ex05();
+		 mega.name = "메가IT 고등학교";
 		
 		while (true) {
 			

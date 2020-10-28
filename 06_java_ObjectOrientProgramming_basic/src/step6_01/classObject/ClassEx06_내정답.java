@@ -30,7 +30,7 @@ class Ex06{
 public class ClassEx06_내정답 {
 
 	public static void main(String[] args) {
-//		Ex06 e = new Ex06();
+		Ex06 e = new Ex06();
 		Scanner scan = new Scanner(System.in);
 		
 		System.out.println("=== OMR ===");

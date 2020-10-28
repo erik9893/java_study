@@ -18,7 +18,7 @@ public class ClassEx02 {
 		e.x = 10;
 		e.y = 20;
 		
-		Character c = new Character(); 
+		Character ch = new Character(); 
 	}
 
 }
