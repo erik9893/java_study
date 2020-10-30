@@ -35,6 +35,7 @@ public class ClassArrayEx06 {
 		m1.name = "박영희";
 		m1.num = 1003;
 		
+		
 		for (int i = 0; i < mg.memberList.length; i++) {
 			System.out.println("num : " + mg.memberList[i].num);
 			System.out.println("name : " + mg.memberList[i].name);

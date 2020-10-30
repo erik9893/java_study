@@ -11,11 +11,13 @@ public class ClassArrayEx01 {
 
 	public static void main(String[] args) {
 
+//		int[] arr = new int[size];
+		
 		//클래스 배열 생성 방법
 		//클래스명[] 객체명 = new 클래스명[배열의 크기]
 		Product[] arr = new Product[3];
-		
 		Product pd = new Product();
+		
 		arr[0] = pd;
 		
 		arr[1] = new Product();
